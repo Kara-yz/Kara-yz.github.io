@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>css3旋转-圆柱体</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+        }
+        .wrapper {
+            text-align: center;
+            margin: 0 auto;
+            width: 100px;
+            -webkit-perspective: 2000px;
+            -webkit-perspective-origin: 50% 50%;
+        }
+        .box-3D {
+            width: 30px;    
+            -webkit-transform-style: preserve-3d;
+            /*向屏幕倾斜10度*/
+            -webkit-transform: rotateX(-10deg) translate3d(0px, 100px, 0px);
+        }
+        .cylinder {
+            -webkit-transform-style: preserve-3d;
+            -webkit-animation: frame 20s infinite linear;
+        }
+        .cylinder div {
+            position: absolute;
+            background-color: #69c;
+            height: 240px;
+            width: 28px;
+            opacity: 0.3;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        .cylinder .ele_1 {
+            -webkit-transform: rotateY(0deg) translateZ(100px);
+        }
+        .cylinder .ele_2 {
+            -webkit-transform: rotateY(15deg) translateZ(100px);
+        }
+        .cylinder .ele_3 {
+            -webkit-transform: rotateY(30deg) translateZ(100px);
+        }
+        .cylinder .ele_4 {
+            -webkit-transform: rotateY(45deg) translateZ(100px);
+        }
+        .cylinder .ele_5 {
+            -webkit-transform: rotateY(60deg) translateZ(100px);
+        }
+        .cylinder .ele_6 {
+            -webkit-transform: rotateY(75deg) translateZ(100px);
+        }
+        .cylinder .ele_7 {
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+        }
+        .cylinder .ele_8 {
+            -webkit-transform: rotateY(105deg) translateZ(100px);
+        }
+        .cylinder .ele_9 {
+            -webkit-transform: rotateY(120deg) translateZ(100px);
+        }
+        .cylinder .ele_10 {
+            -webkit-transform: rotateY(135deg) translateZ(100px);
+        }
+        .cylinder .ele_11 {
+            -webkit-transform: rotateY(150deg) translateZ(100px);
+        }
+        .cylinder .ele_12 {
+            -webkit-transform: rotateY(165deg) translateZ(100px);
+        }
+        .cylinder .ele_13 {
+            -webkit-transform: rotateY(180deg) translateZ(100px);
+        }
+        .cylinder .ele_14 {
+            -webkit-transform: rotateY(195deg) translateZ(100px);
+        }
+        .cylinder .ele_15 {
+            -webkit-transform: rotateY(210deg) translateZ(100px);
+        }
+        .cylinder .ele_16 {
+            -webkit-transform: rotateY(225deg) translateZ(100px);
+        }
+        .cylinder .ele_17 {
+            -webkit-transform: rotateY(240deg) translateZ(100px);
+        }
+        .cylinder .ele_18 {
+            -webkit-transform: rotateY(255deg) translateZ(100px);
+        }
+        .cylinder .ele_19 {
+            -webkit-transform: rotateY(270deg) translateZ(100px);
+        }
+        .cylinder .ele_20 {
+            -webkit-transform: rotateY(285deg) translateZ(100px);
+        }
+        .cylinder .ele_21 {
+            -webkit-transform: rotateY(300deg) translateZ(100px);
+        }
+        .cylinder .ele_22 {
+            -webkit-transform: rotateY(315deg) translateZ(100px);
+        }
+        .cylinder .ele_23 {
+            -webkit-transform: rotateY(330deg) translateZ(100px);
+        }
+        .cylinder .ele_24 {
+            -webkit-transform: rotateY(345deg) translateZ(100px);
+        }
+        @-webkit-keyframes frame {
+            from {
+                -webkit-transform: rotateY(0);
+            }
+            to {
+                -webkit-transform: rotateY(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box-3D">
+        <div class="cylinder">
+            <div class="ele_1"></div>
+            <div class="ele_2"></div>
+            <div class="ele_3"></div>
+            <div class="ele_4"></div>
+            <div class="ele_5"></div>
+            <div class="ele_6"></div>
+            <div class="ele_7"></div>
+            <div class="ele_8"></div>
+            <div class="ele_9"></div>
+            <div class="ele_10"></div>
+            <div class="ele_11"></div>
+            <div class="ele_12"></div>
+            <div class="ele_13"></div>
+            <div class="ele_14"></div>
+            <div class="ele_15"></div>
+            <div class="ele_16"></div>
+            <div class="ele_17"></div>
+            <div class="ele_18"></div>
+            <div class="ele_19"></div>
+            <div class="ele_20"></div>
+            <div class="ele_21"></div>
+            <div class="ele_22"></div>
+            <div class="ele_23"></div>
+            <div class="ele_24"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
