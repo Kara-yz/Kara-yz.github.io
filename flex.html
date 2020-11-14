@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>九宫格拖拽功能</title>
+		<style type="text/css">
+			#wrapper{
+				display: flex;
+				justify-content: space-between;
+			}
+			#wrapper select{
+				width: 180px;
+				height: 30px;
+			}
+			ul{
+				display: flex;
+				flex-direction: column;
+			}
+			ul > li{
+				width: 500px;
+				height: 60px;
+				border: 1px solid #ccc;
+				line-height: 50px;
+				text-align: center;
+				color: #000;
+				font-size: 50px;
+				margin-bottom: 5px;
+				order: 1;
+				list-style: none;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<select onchange="getValue(this.value)">
+				<option value ="1">1</option>
+				<option value ="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value ="5">5</option>
+				<option value ="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value ="9">9</option>
+				<option value ="10">10</option>
+			</select>
+			<ul id="flexBox">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			function getValue(val) {
+				var oUl = document.getElementById('flexBox');
+				var oLi = oUl.getElementsByTagName('li');
+				for(var i = 0; i < oLi.length; i++){
+					oLi[i].style.order = i + 1
+				}
+				oLi[val -1].style.order = 0;
+			}
+		</script>
+	</body>
+
+</html>
