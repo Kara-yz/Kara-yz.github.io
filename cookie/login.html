@@ -1,0 +1,31 @@
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登陆</title>
+</head>
+<body style="background-color:#efeeee;">
+    <div>
+        <div>
+            账号: <input type="text" class="name" value="bzxiaozhan" />
+        </div>
+        <div>
+            密码: <input type="password" class="pwd" value="123456" />
+        </div>
+        <div>
+            <button type="sub" class="sub">登陆</button>
+        </div>
+    </div>
+<script src="jquery.min.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+    $(".sub").click(function(){
+        var bzname = $(".name").val()
+        var expiresTime = new Date(new Date().getTime() + 60 * 1000);
+        $.cookie('bzname', bzname, {path:'/', expires: expiresTime });
+        window.location = "./index.html"
+    })
+</script>
+</body>
+</html>
